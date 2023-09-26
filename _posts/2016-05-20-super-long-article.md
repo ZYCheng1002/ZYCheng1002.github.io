@@ -2,7 +2,7 @@
 layout: page
 title:  "Some articles are just so long they deserve a really long title to see if things will break well"
 subtitle: "A shorter explanation of stuff"
-date:   2016-05-20 21:21:21 +0530
+date:   2016-05-20 21:21:21 +0800
 categories: misc
 ---
 
