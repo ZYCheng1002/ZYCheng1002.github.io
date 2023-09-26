@@ -2,7 +2,7 @@
 layout: page
 title:  "FAST LIO"
 subtitle: "FAST LIO NOTED"
-date:   2023-09-26 20:25:21 +0530
+date:   2023-09-26 20:25:21 +0800
 categories: ["general"]
 ---
 
