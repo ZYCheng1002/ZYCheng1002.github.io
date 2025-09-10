@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hello
-subtitle: My name is ZYCheng
+subtitle: My name is Pudhina
 sitemap:
   priority: 0.9
 ---
@@ -9,5 +9,6 @@ sitemap:
 <img src="{{ '/assets/img/pudhina.jpg' | prepend: site.baseurl }}" id="about-img">
 
 <div id="describe-text">
-	<p>📝 My Tech Notebook 🧠 | Learning notes on <strong>SLAM</strong>, transformer-based <strong>3D reconstruction</strong> 🎛️, <strong>MLLM</strong> & <strong>VLA</strong> exploration.</p>
+	<p>A simple, minimal Jekyll theme for a personal web page and blog, focusing on white space and readability</p>
+	<p>Fork and use the theme from the <strong> <a href="https://github.com/knhash/Pudhina"> repository</a> </strong></p>
 </div>
