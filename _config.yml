@@ -1,16 +1,16 @@
 # Site settings
-title: Pudhina
+title: Notebook
 description: >
-  A simple, minimal Jekyll theme for a personal web page and blog, focusing on white space and readability
+  Personal website 🌱 | Thoughts on tech, creativity, and lifelong learning.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://zycheng1002.github.io/" # the base hostname & protocol for your site
 
 author:
-  fullname: Pudhina
-  github: github
+  fullname: ZYCheng
+  github: ZYCheng1002
   linkedin: linkedin
-  email: example@email.com
+  email: cczyy0@email.com
 
 
 # Syntax highlighting
