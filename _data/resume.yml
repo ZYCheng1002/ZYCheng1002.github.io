@@ -1,0 +1,27 @@
+# _data/resume.yml
+# 基础信息
+basic:
+  name: "程志原"
+  title: "Algorithm Engineer (SLAM/VLA/VLM)"
+  email: "cczyy0@gmail.com"
+  github: "github.com/ZYCheng1002"
+  phone: "+86"
+
+# 核心技能
+skills:
+  - "SLAM"
+  - "VLA/VLM"
+  - "C++/Python/ROS"
+
+# 项目/研究经验
+projects:
+  - title: "VLM-based Embodied Reasoning"
+    period: "2025/1 - 2025/10"
+    description: "Improving spatial reasoning in VLM models for embodied intelligence. [iFlyBot-VLM Technical Report](https://arxiv.org/abs/2511.04976)"
+
+# 教育背景（可选）
+education:
+  - degree: "硕士"
+    school: "燕山大学"
+    period: "2019 - 2022"
+    major: "光学工程"

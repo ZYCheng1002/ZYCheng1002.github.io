@@ -1,0 +1,86 @@
+---
+layout: page
+title: "个人简历 - SLAM/VLA 算法工程师"
+permalink: /resume/
+---
+
+<!-- 简历页面样式：轻量适配，不破坏主题原有样式 -->
+<style>
+  .resume-container {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 0 1em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  .resume-section {
+    margin: 2em 0;
+  }
+  .resume-section-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+  }
+  .skill-tag {
+    display: inline-block;
+    background: #f5f9ff;
+    padding: 0.3em 0.8em;
+    margin: 0.2em 0.3em;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  .project-item {
+    margin-bottom: 1em;
+  }
+  .project-title {
+    font-weight: 500;
+  }
+  .project-period {
+    color: #666;
+    font-size: 0.9em;
+    margin-left: 0.5em;
+  }
+</style>
+
+<div class="resume-container">
+  <!-- 基础信息 -->
+  <div class="resume-section-title">Basic Info</div>
+  <p>
+    <b> Email </b>: {{ site.data.resume.basic.email }} | 
+    <b> GitHub </b>: <a href="https://{{ site.data.resume.basic.github }}" target="_blank">{{ site.data.resume.basic.github }}</a>
+    {% if site.data.resume.basic.phone %} {% endif %}
+  </p>
+
+  <!-- 核心技能 -->
+  <div class="resume-section">
+    <div class="resume-section-title">Core Skills</div>
+    {% for skill in site.data.resume.skills %}
+      <span class="skill-tag">{{ skill }}</span>
+    {% endfor %}
+  </div>
+
+  <!-- 项目经验 -->
+  <div class="resume-section">
+    <div class="resume-section-title">Research & Project Experience</div>
+    {% for project in site.data.resume.projects %}
+      <div class="project-item">
+        <span class="project-title">{{ project.title }}</span>
+        <span class="project-period">{{ project.period }}</span>
+        <p>{{ project.description | markdownify}}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- 教育背景（可选） -->
+  {% if site.data.resume.education %}
+  <div class="resume-section">
+    <div class="resume-section-title">Education</div>
+    {% for edu in site.data.resume.education %}
+      <p>
+        <b>{{ edu.degree }}</b> - {{ edu.major }} - {{ edu.school }} ({{ edu.period }})<br>
+      </p>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
