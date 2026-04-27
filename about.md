@@ -1,19 +1,18 @@
 ---
-title: Colophon
+title: About
 permalink: /about/
 layout: page
-excerpt: Hello peeps, I'm student of computer science from Banyuwangi, living in Jogjakarta. This blog for documentation about my programming journey, running on jekyll, hosting on netlify and using my own simple theme.
+excerpt: Algorithm Engineer working on SLAM, VLA, and practical spatial intelligence systems.
 comments: false
 ---
 
-I'm an Algorithm Engineer, living in Hefei📍. This is my personal tech blog where I share insights on programming practice, engineering implementation, and algorithm comprehension💻. 
-Over the past few years, I’ve been engaged in autonomous driving, robot <a href="https://github.com/ZYCheng1002/Awesome-SLAM-and-3D-Reconstruction" target="_blank" rel="noopener">SLAM</a>, as well as robot <a href="https://github.com/ZYCheng1002/Awesome-Embodied-MLLMs-VLA" target="_blank" rel="noopener">VLM/VLA</a> research🤖. I keep a record of my technical career here primarily to remind myself never to forget the knowledge accumulated along the learning journey, and to solidify my understanding through constant sorting and sharing📝. 
+I am an Algorithm Engineer based in Hefei, working on SLAM, VLA, and practical spatial intelligence systems.
 
-If you have a question about me or else, just send a letter to me📧.
+This site is my personal technical notebook. I use it to document research ideas, engineering practice, implementation details, and lessons learned along the way.
 
-You can [report](https://github.com/ZYCheng1002/ZYCheng1002.github.io/issues/new) if there is an broken link(s) or somethings else.
+My goal is simple: turn scattered experience into structured knowledge that is easier to revisit, refine, and share.
 
-**may u needs ✨**
+If you would like to get in touch, feel free to email me or find me on GitHub.
 
 - {{ site.author.email }}
 - github.com/{{ site.author.github }}

@@ -1,58 +1,134 @@
 ---
 layout: page
-title: "个人简历 - SLAM/VLA 算法工程师"
+title: Resume
 permalink: /resume/
 ---
 
-<!-- 简历页面样式：轻量适配，不破坏主题原有样式 -->
 <style>
   .resume-container {
     max-width: 800px;
     margin: 2em auto;
     padding: 0 1em;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
+
   .resume-section {
-    margin: 2em 0;
+    margin: 2.25em 0;
   }
+
   .resume-section-title {
-    font-size: 1.2em;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #666;
     border-bottom: 1px solid #eaeaea;
-    padding-bottom: 0.5em;
-    margin-bottom: 1em;
+    padding-bottom: 0.65em;
+    margin-bottom: 1.2em;
   }
+
+  .resume-meta {
+    line-height: 1.8;
+  }
+
+  .resume-meta div + div {
+    margin-top: 0.15em;
+  }
+
   .skill-tag {
     display: inline-block;
     background: #f5f9ff;
+    color: inherit;
+    border: 1px solid #e6edf7;
     padding: 0.3em 0.8em;
-    margin: 0.2em 0.3em;
+    margin: 0.2em 0.3em 0.2em 0;
     border-radius: 4px;
     font-size: 0.9em;
   }
+
   .project-item {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
+    padding: 0 0 1.25em;
+    border-bottom: 1px solid #efefef;
   }
+
+  .project-item:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1em;
+    margin-bottom: 0.5em;
+    flex-wrap: wrap;
+  }
+
   .project-title {
-    font-weight: 500;
+    font-size: 1.05rem;
+    font-weight: 600;
   }
+
   .project-period {
     color: #666;
-    font-size: 0.9em;
-    margin-left: 0.5em;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .project-details {
+    margin: 0;
+    padding-left: 1.1em;
+  }
+
+  .project-details li {
+    margin: 0.35em 0;
+  }
+
+  .education-item {
+    margin: 0;
+    line-height: 1.8;
+  }
+
+  body[data-theme="dark"] .resume-section-title {
+    color: #b7b7b7;
+  }
+
+  body[data-theme="dark"] .resume-section-title {
+    border-bottom-color: #3a3a3a;
+  }
+
+  body[data-theme="dark"] .skill-tag {
+    background: #20252d;
+    border-color: #343b45;
+    color: #f2f2f2;
+  }
+
+  body[data-theme="dark"] .project-period {
+    color: #a0a0a0;
+  }
+
+  body[data-theme="dark"] .project-item {
+    border-bottom-color: #303030;
   }
 </style>
 
 <div class="resume-container">
-  <!-- 基础信息 -->
-  <div class="resume-section-title">Basic Info</div>
-  <p>
-    <b> Email </b>: {{ site.data.resume.basic.email }} | 
-    <b> GitHub </b>: <a href="https://{{ site.data.resume.basic.github }}" target="_blank">{{ site.data.resume.basic.github }}</a>
-    {% if site.data.resume.basic.phone %} {% endif %}
-  </p>
+  <div class="resume-section">
+    <div class="resume-section-title">Profile</div>
+    <div class="resume-meta">
+      <div><b>Name</b>: {{ site.data.resume.basic.name }}</div>
+      <div><b>Title</b>: {{ site.data.resume.basic.title }}</div>
+      <div><b>Email</b>: {{ site.data.resume.basic.email }}</div>
+      <div>
+        <b>GitHub</b>:
+        <a href="https://{{ site.data.resume.basic.github }}" target="_blank" rel="noopener">
+          {{ site.data.resume.basic.github }}
+        </a>
+      </div>
+    </div>
+  </div>
 
-  <!-- 核心技能 -->
   <div class="resume-section">
     <div class="resume-section-title">Core Skills</div>
     {% for skill in site.data.resume.skills %}
@@ -60,25 +136,32 @@ permalink: /resume/
     {% endfor %}
   </div>
 
-  <!-- 项目经验 -->
   <div class="resume-section">
-    <div class="resume-section-title">Research & Project Experience</div>
+    <div class="resume-section-title">Selected Experience</div>
     {% for project in site.data.resume.projects %}
       <div class="project-item">
-        <span class="project-title">{{ project.title }}</span>
-        <span class="project-period">{{ project.period }}</span>
-        <p>{{ project.description | markdownify}}</p>
+        <div class="project-header">
+          <span class="project-title">{{ project.title }}</span>
+          <span class="project-period">{{ project.period }}</span>
+        </div>
+        {% if project.highlights %}
+          <ul class="project-details">
+            {% for item in project.highlights %}
+              <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </div>
     {% endfor %}
   </div>
 
-  <!-- 教育背景（可选） -->
   {% if site.data.resume.education %}
   <div class="resume-section">
     <div class="resume-section-title">Education</div>
     {% for edu in site.data.resume.education %}
-      <p>
-        <b>{{ edu.degree }}</b> - {{ edu.major }} - {{ edu.school }} ({{ edu.period }})<br>
+      <p class="education-item">
+        <b>{{ edu.degree }}</b>, {{ edu.major }}<br>
+        {{ edu.school }} ({{ edu.period }})
       </p>
     {% endfor %}
   </div>
