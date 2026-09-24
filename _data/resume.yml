@@ -9,9 +9,14 @@ skills:
   - "VLA"
   - "C++"
   - "Python"
-  - "ROS"
 
 projects:
+  - title: "GEAR-VLA"
+    period: "2026"
+    highlights:
+      - "[arXiv: GEAR-VLA: Learning Geometry-Aware Action Representations for Generalizable Robotic Manipulation](https://arxiv.org/abs/2606.08530)"
+      - "Few-shot Universal Grasping"
+
   - title: "iFlyBot-VLM Technical Report"
     period: "2025"
     highlights:
